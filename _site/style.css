@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;   
+}
+
+.top-section {
+    text-align: center;  
+}
+
+.top-text {
+    font-size: 20px;
+}
+
+#total-count {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#unique-count {
+    font-size: 50;;
+    font-weight: bold;
+}
