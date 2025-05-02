@@ -72,7 +72,7 @@ async function readPeriodEvents(periodName, ultFiles, meleeFiles){
     return {periodName, ult, melee};
 }
 
-let events = [await readPeriodEvents("legacy", ULT_OLD, MELEE_OLD)];
+let events = [await readPeriodEvents("2019 - 2023", ULT_OLD, MELEE_OLD)];
 let year = starting_year;
 
 while (true){
@@ -81,7 +81,7 @@ while (true){
     events.push(await readPeriodEvents(""+year, [
         `seasons/${year}.1/eventsToulouse.txt`,
         `seasons/${year}.2/eventsToulouse.txt`,
-        `seasons-unranked/${year}/eventsToulouse.txt`,
+        `seasons-unranked/${year}/unrankedEvents.txt`,
     ], [
         `seasons/ssbm.${year}/eventsToulouse.txt`,
         `seasons-unranked/${year}/rivalsEvents.txt`,
