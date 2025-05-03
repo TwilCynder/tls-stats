@@ -25,6 +25,7 @@ jobs:
             -   name: "Checkout TLSEvents"
                 uses: actions/checkout@v4
                 with:
+                    path: tlsEvents
                     repository: twilcynder/tlsEvents
                     token: ${{ secrets.PAT }}
             -   name: Install Node
