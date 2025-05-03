@@ -35,7 +35,7 @@ jobs:
                     pwd
                     ls -l
                     cd sggap
-                    npm Install
+                    npm install
                     mv node_modules ..
                     cd ..
                     ls -l
