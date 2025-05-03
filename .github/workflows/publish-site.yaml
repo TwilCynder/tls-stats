@@ -3,7 +3,7 @@ name: Deploy Site with updated data
 on: 
     push: 
         branches: 
-            - main
+            - master
     schedule:
         - cron:  '49 12 * * 1'
     workflow_dispatch:
@@ -31,6 +31,8 @@ jobs:
                 uses: actions/setup-node@v4
             -   name: Setup dependencies
                 run: |
+                    pwd
+                    ls -l
                     cd sggap
                     npm Install
                     mv node_modules ..
