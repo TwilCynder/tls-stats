@@ -110,4 +110,4 @@ limiter.stop();
 console.log(totalCount);
 console.log(totalUnique);
 
-fs.writeFileSync("_site/data.json", JSON.stringify({totalCount, totalUnique, periods}, null, 4));
+fs.writeFileSync("_site/data.json", JSON.stringify({totalCount, totalUnique, periods}, null));
