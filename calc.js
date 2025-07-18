@@ -7,9 +7,9 @@ import { processUniqueEntrantsLeague } from "./sggap/include/uniqueEntrantsUtil.
 import fs from 'fs'
 
 const ULT_OLD=[
-    "seasons/legacy/events.txt", 
-    "seasons/2023.2/eventsTLS.txt",
-    "seasons-unranked/legacy/unrankedEvents.txt"
+    "seasons/legacy/events.sll", 
+    "seasons/2023.2/eventsTLS.sll",
+    "seasons-unranked/legacy/unrankedEvents.sll"
 ];
 const MELEE_OLD=["/seasons/legacy/meleeEvents.txt"]
 const starting_year = 2024; 
@@ -20,7 +20,7 @@ const starting_year = 2024;
  */
 function processPeriod(periodData){
     let countUlt = 0;
-    let entrantsUlt = [];
+    let entrantsUlt  = [];
     let countMelee = 0;
     let entrantsMelee = [];
 
@@ -79,12 +79,12 @@ while (true){
     if (!fs.existsSync(`./tlsEvents/seasons/${year}.1`)) break;
 
     events.push(await readPeriodEvents(""+year, [
-        `seasons/${year}.1/eventsTLS.txt`,
-        `seasons/${year}.2/eventsTLS.txt`,
-        `seasons-unranked/${year}/unrankedEvents.txt`,
+        `seasons/${year}.1/eventsTLS.sll`,
+        `seasons/${year}.2/eventsTLS.sll`,
+        `seasons-unranked/${year}/unrankedEvents.sll`,
     ], [
-        `seasons/ssbm.${year}/eventsTLS.txt`,
-        `seasons-unranked/${year}/rivalsEvents.txt`,
+        `seasons/ssbm.${year}/eventsTLS.sll`,
+        `seasons-unranked/${year}/rivalsEvents.sll`,
     ]));
 
     year++;
