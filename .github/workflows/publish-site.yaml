@@ -33,10 +33,6 @@ jobs:
                 uses: actions/setup-node@v4
             -   name: Setup dependencies
                 run: |
-                    pwd
-                    ls -l
-                    cat sggap/include/lib/computeEventList.js
-                    cat sggap/include/lib/readUtil.js
                     cd sggap
                     npm install
                     mv node_modules ..
